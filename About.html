@@ -1,0 +1,293 @@
+<!-- FULL FINAL HTML PAGE CODE -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IBACCO | About</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(circle at top left, #fff5f7, #d1e8ff);
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar {
+      background: linear-gradient(to right, #ff6a88, #ff99ac);
+    }
+    .navbar-brand, .nav-link {
+      color: white !important;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+    .hero-section {
+      background: url('https://images.unsplash.com/photo-1589710751732-c2b3e47be7f2') no-repeat center center / cover;
+      padding: 120px 20px;
+      color: #fff;
+      text-align: center;
+      position: relative;
+    }
+    .hero-section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+    }
+    .hero-section h1, .hero-section p {
+      position: relative;
+      z-index: 1;
+    }
+    .section {
+      padding: 60px 20px;
+      position: relative;
+      z-index: 1;
+      background-color: #fce4ec;
+    }
+    .section h2 {
+      text-align: center;
+      font-weight: 700;
+      color: #007bff;
+      margin-bottom: 40px;
+    }
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      justify-content: center;
+    }
+    .feature-box {
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 16px;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+      width: 260px;
+      transition: 0.3s ease;
+      backdrop-filter: blur(5px);
+    }
+    .feature-box:hover {
+      transform: translateY(-8px) scale(1.02);
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+    }
+    .no-result {
+      text-align: center;
+      color: red;
+      font-weight: 600;
+      margin-top: 20px;
+      display: none;
+    }
+    .contact-form {
+      max-width: 700px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+    }
+    footer {
+      background-color: #343a40;
+      color: #ddd;
+      text-align: center;
+      padding: 30px 10px;
+      font-size: 0.9rem;
+    }
+    .form-control, .btn {
+      border-radius: 10px !important;
+    }
+    .btn-primary {
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      border: none;
+    }
+    .btn-clear {
+      margin-left: 8px;
+      background-color: #ffc107;
+      border: none;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg sticky-top" data-aos="fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">IBACCO</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon bg-light"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+        <li class="nav-item"><a class="nav-link" href="About.html">About</a></li>
+      </ul>
+      <form class="d-flex" id="searchForm">
+        <input class="form-control me-2" type="search" placeholder="Search flavors..." id="searchInput">
+        <button class="btn btn-outline-light" type="submit">Search</button>
+        <button class="btn btn-clear" type="button" id="clearBtn">Clear</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<div class="hero-section" data-aos="zoom-in">
+  <h1>Welcome to IBACCO</h1>
+  <p>Where flavor meets freshness — discover handcrafted ice creams made with love & premium ingredients.</p>
+</div>
+
+<!-- Flavors -->
+<section class="section searchable">
+  <h2 data-aos="fade-up">Popular Flavors</h2>
+  <div class="features">
+    <div class="feature-box searchable" data-aos="flip-left"><h4>Butterscotch</h4><p>Caramel bliss with crunchy bits in a creamy base.</p></div>
+    <div class="feature-box searchable" data-aos="flip-left"><h4>Chocolate</h4><p>Rich cocoa delight for true chocoholics.</p></div>
+    <div class="feature-box searchable" data-aos="flip-left"><h4>Vanilla</h4><p>Classic and smooth with natural vanilla extract.</p></div>
+    <div class="feature-box searchable" data-aos="flip-left"><h4>Strawberry</h4><p>Made with real berries for a fruity burst.</p></div>
+    <div class="feature-box searchable" data-aos="flip-left"><h4>Mango</h4><p>Tropical and tangy using sun-ripened mangoes.</p></div>
+  </div>
+  <div id="noResult" class="no-result">No matching flavors found.</div>
+</section>
+
+<!-- Ingredients -->
+<section class="section searchable">
+  <h2 data-aos="fade-up">Our Ingredients</h2>
+  <div class="text-center" data-aos="fade-in">
+    <p>We only use:</p>
+    <ul class="list-unstyled">
+      <li>🥛 Full-fat Milk & Fresh Cream</li>
+      <li>🍫 Natural Cocoa & Vanilla Beans</li>
+      <li>🍓 Real Fruits & Extracts</li>
+      <li>🍯 Organic Sugar</li>
+      <li>🥢 Sea Salt & Optional Egg Yolk</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="section searchable">
+  <h2 data-aos="fade-up">Get in Touch</h2>
+  <form class="contact-form" data-aos="fade-up">
+    <input type="text" class="form-control mb-3" placeholder="Your Name" required>
+    <input type="email" class="form-control mb-3" placeholder="Your Email" required>
+    <textarea class="form-control mb-3" rows="4" placeholder="Your Message" required></textarea>
+    <div class="text-center">
+      <button class="btn btn-primary px-4" type="submit">Send Message</button>
+    </div>
+  </form>
+</section>
+
+<!-- Testimonials -->
+<section class="section searchable">
+  <h2 data-aos="fade-up">What Our Customers Say</h2>
+  <div class="text-center" data-aos="zoom-in">
+    <p class="fs-5">"Absolutely love the butterscotch. Creamy and perfect!"</p>
+    <div class="text-warning fs-4 mb-2">★★★★★</div>
+    <p><strong>— Meena, Chennai</strong></p>
+  </div>
+</section>
+
+<!-- Team -->
+<section class="section" id="team">
+  <h2 data-aos="fade-up">Meet Our Team</h2>
+  <div class="row text-center">
+    <div class="col-md-4" data-aos="flip-up">
+      <img src="https://i.pravatar.cc/150?img=11" class="rounded-circle mb-2" width="100" />
+      <h5>Anitha B.</h5>
+      <p>Founder & Recipe Creator</p>
+    </div>
+    <div class="col-md-4" data-aos="flip-up">
+      <img src="https://i.pravatar.cc/150?img=14" class="rounded-circle mb-2" width="100" />
+      <h5>Saravanan R.</h5>
+      <p>Co-Founder & Marketing Head</p>
+    </div>
+    <div class="col-md-4" data-aos="flip-up">
+      <img src="https://i.pravatar.cc/150?img=25" class="rounded-circle mb-2" width="100" />
+      <h5>Krithika N.</h5>
+      <p>Customer Experience Lead</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- Learn More Video Section -->
+<section class="section" style="background-color: #fff0f6;">
+  <h2 class="text-center mb-4" data-aos="fade-up">🍦 Learn How Ice Cream is Made</h2>
+  <div class="container d-flex justify-content-center" data-aos="zoom-in">
+    <div class="ratio ratio-16x9" style="max-width: 800px; border-radius: 12px; overflow: hidden;">
+      <iframe 
+        src="https://www.youtube.com/embed/bDDazMFfW2g" 
+        title="How Ice Cream is Made | Educational for Kids"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 IBACCO Ice Creams. All rights reserved.</p>
+  <p>📍 Chennai, Tamil Nadu | 📞 +91 98765 43210 | ✉️ ibacco007@gmail.com</p>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+
+  // Counter animation
+  const counters = document.querySelectorAll('.counter');
+  counters.forEach(counter => {
+    counter.innerText = '0';
+    const updateCounter = () => {
+      const target = +counter.getAttribute('data-target');
+      const count = +counter.innerText;
+      const increment = target / 200;
+      if (count < target) {
+        counter.innerText = `${Math.ceil(count + increment)}`;
+        setTimeout(updateCounter, 10);
+      } else {
+        counter.innerText = target;
+      }
+    };
+    updateCounter();
+  });
+
+  // Search functionality
+  const searchInput = document.getElementById('searchInput');
+  const clearBtn = document.getElementById('clearBtn');
+  const form = document.getElementById('searchForm');
+  const searchables = document.querySelectorAll('.searchable');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const query = searchInput.value.toLowerCase().trim();
+    let found = false;
+
+    searchables.forEach(el => {
+      const text = el.innerText.toLowerCase();
+      if (text.includes(query)) {
+        el.style.display = '';
+        found = true;
+      } else {
+        el.style.display = 'none';
+      }
+    });
+
+    document.getElementById('noResult').style.display = found ? 'none' : 'block';
+  });
+
+  clearBtn.addEventListener('click', () => {
+    searchInput.value = '';
+    searchables.forEach(el => el.style.display = '');
+    document.getElementById('noResult').style.display = 'none';
+  });
+</script>
+</body>
+</html>
